@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:db="http://localhost/rdf/ontology/"
+	xmlns:dbo="http://um-cds/ontologies/databaseontology/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/DatabaseTable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/DatabaseColumn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/PrimaryKey">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/ForeignKey">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/has_column">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/has_value">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/has_unit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/ColumnReference">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/table">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/catalog">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/schema">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://um-cds/ontologies/databaseontology/column">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome</label>
+	<dbo:table>Outcome</dbo:table>
+	<dbo:catalog>Rectum_Sage</dbo:catalog>
+	<dbo:schema>dbo</dbo:schema>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.PCI">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.PCI</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>PCI</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.Geboortemaand">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.Geboortemaand</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>Geboortemaand</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.Geslacht">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.Geslacht</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>Geslacht</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.Invoerdatum">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.Invoerdatum</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>Invoerdatum</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.VraagType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.VraagType</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>VraagType</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.Vraagstelling">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.Vraagstelling</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>Vraagstelling</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Outcome.Antwoord">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Outcome.Antwoord</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Outcome"/>
+	<dbo:column>Antwoord</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment</label>
+	<dbo:table>Tumour_Treatment</dbo:table>
+	<dbo:catalog>Rectum_Sage</dbo:catalog>
+	<dbo:schema>dbo</dbo:schema>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.PCI">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.PCI</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>PCI</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Geboortemaand">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Geboortemaand</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Geboortemaand</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Geslacht">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Geslacht</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Geslacht</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Overleden">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Overleden</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Overleden</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Datum overlijden</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Datum overlijden</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Laatste_datum_check_in_leven">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Laatste datum check in leven</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Laatste datum check in leven</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Diagnose">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Diagnose</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Diagnose</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Datum_diagnose">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Datum diagnose</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Datum diagnose</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.cT">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.cT</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>cT</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.cN">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.cN</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>cN</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.cM">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.cM</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>cM</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.PBD">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.PBD</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>PBD</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Zorgplan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Zorgplan</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Zorgplan</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Doelvolume_deel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Doelvolume deel</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Doelvolume deel</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.EPD_-_Voorgeschreven_fractiedosis">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.EPD - Voorgeschreven fractiedosis</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>EPD - Voorgeschreven fractiedosis</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.EPD_-_Voorgeschreven_aantal_fracties">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.EPD - Voorgeschreven aantal fracties</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>EPD - Voorgeschreven aantal fracties</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.EPD_-_Voorgeschreven_aantal_fracties_per_dag">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.EPD - Voorgeschreven aantal fracties per dag</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>EPD - Voorgeschreven aantal fracties per dag</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.EPD_-_Voorgeschreven_plandosis">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.EPD - Voorgeschreven plandosis</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>EPD - Voorgeschreven plandosis</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Gegeven_fracties_voor_PBD">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Gegeven fracties voor PBD</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Gegeven fracties voor PBD</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/Tumour_Treatment.Gegeven_plandosis_voor_PBD">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Tumour_Treatment.Gegeven plandosis voor PBD</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/Tumour_Treatment"/>
+	<dbo:column>Gegeven plandosis voor PBD</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_action_map">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_action_map</label>
+	<dbo:table>trace_xe_action_map</dbo:table>
+	<dbo:catalog>Rectum_Sage</dbo:catalog>
+	<dbo:schema>sys</dbo:schema>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_action_map.trace_column_id">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_action_map.trace_column_id</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_action_map"/>
+	<dbo:column>trace_column_id</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_action_map.package_name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_action_map.package_name</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_action_map"/>
+	<dbo:column>package_name</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_action_map.xe_action_name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_action_map.xe_action_name</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_action_map"/>
+	<dbo:column>xe_action_name</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_event_map">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseTable"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_event_map</label>
+	<dbo:table>trace_xe_event_map</dbo:table>
+	<dbo:catalog>Rectum_Sage</dbo:catalog>
+	<dbo:schema>sys</dbo:schema>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_event_map.trace_event_id">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_event_map.trace_event_id</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_event_map"/>
+	<dbo:column>trace_event_id</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_event_map.package_name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_event_map.package_name</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_event_map"/>
+	<dbo:column>package_name</dbo:column>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://localhost/rdf/ontology/trace_xe_event_map.xe_event_name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://um-cds/ontologies/databaseontology/DatabaseColumn"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">trace_xe_event_map.xe_event_name</label>
+	<dbo:table rdf:resource="http://localhost/rdf/ontology/trace_xe_event_map"/>
+	<dbo:column>xe_event_name</dbo:column>
+</rdf:Description>
+
+</rdf:RDF>
