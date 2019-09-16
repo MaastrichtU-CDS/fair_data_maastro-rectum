@@ -1,0 +1,29 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+INSERT {
+    ?term owl:equivalentClass [
+        rdf:type owl:Class;
+        owl:intersectionOf [
+            rdf:first ?superClass;
+            rdf:rest [
+                rdf:first [
+                    rdf:type owl:Class;
+                    owl:unionOf [
+                        rdf:first [
+                            rdf:type owl:Restriction;
+                            owl:hasValue ?localValue;
+                            owl:onProperty <http://um-cds/ontologies/databaseontology/has_value>;
+                        ];
+                        rdf:rest rdf:nil;
+                    ]
+                ];
+                rdf:rest rdf:nil;
+            ]
+        ]
+    ].
+} WHERE { 
+	BIND(<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48728> AS ?term).
+	BIND(<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885> AS ?superClass).
+	BIND("3"^^xsd:string AS ?localValue).
+}
