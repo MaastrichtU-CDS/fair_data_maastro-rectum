@@ -42,7 +42,7 @@ def addMapping(localTerm, targetClass, superClass):
     headers={
         "Content-Type": "application/x-www-form-urlencoded"
     })
-    print(annotationResponse.code)
+    print(annotationResponse.status_code)
 
 #cT stage
 addMapping("0", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48719", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
