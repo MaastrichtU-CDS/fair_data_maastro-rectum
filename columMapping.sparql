@@ -3,21 +3,23 @@ PREFIX roo: <http://www.cancerdata.org/roo/>
 PREFIX myMapping: <http://localhost/myMapping/>
 
 INSERT {
-    <http://localhost/rdf/ontology/Tumour_Treatment.cT> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.cN> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.cM> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48883>.
-
-    <http://localhost/rdf/ontology/Tumour_Treatment.Diagnose> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15220>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.Datum_diagnose> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.Diagnose> roo:P100228 <http://localhost/rdf/ontology/Tumour_Treatment.Datum_diagnose>.
-
-    <http://localhost/rdf/ontology/Tumour_Treatment.Overleden> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25717>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
-    <http://localhost/rdf/ontology/Tumour_Treatment.Overleden> roo:P100228 <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden>.
-
-    <http://localhost/rdf/ontology/Tumour_Treatment.Geslacht> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17357>.
-
-    <http://localhost/rdf/ontology/Tumour_Treatment.Geboortemaand> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25155>,
-                                                                                       <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
+    GRAPH <http://annotation.local/> {
+        <http://localhost/rdf/ontology/Tumour_Treatment.cT> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.cN> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.cM> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48883>.
+    
+        <http://localhost/rdf/ontology/Tumour_Treatment.Diagnose> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15220>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.Datum_diagnose> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.Diagnose> roo:P100228 <http://localhost/rdf/ontology/Tumour_Treatment.Datum_diagnose>.
+    
+        <http://localhost/rdf/ontology/Tumour_Treatment.Overleden> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25717>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.Overleden> roo:P100228 <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden>.
+    
+        <http://localhost/rdf/ontology/Tumour_Treatment.Geslacht> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17357>.
+    
+        <http://localhost/rdf/ontology/Tumour_Treatment.Geboortemaand> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25155>,
+                                                                                           <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
+    }
 } WHERE {
 }
