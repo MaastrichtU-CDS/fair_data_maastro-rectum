@@ -16,7 +16,7 @@ INSERT {
         <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
         <http://localhost/rdf/ontology/Tumour_Treatment.Overleden> roo:P100228 <http://localhost/rdf/ontology/Tumour_Treatment.Datum_overlijden>.
     
-        <http://localhost/rdf/ontology/Tumour_Treatment.Geslacht> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17357>.
+        <http://localhost/rdf/ontology/Tumour_Treatment.Geslacht> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421>.
     
         <http://localhost/rdf/ontology/Tumour_Treatment.Geboortemaand> owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25155>,
                                                                                            <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25164>.
