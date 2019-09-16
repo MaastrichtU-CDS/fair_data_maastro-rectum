@@ -36,12 +36,13 @@ def addMapping(localTerm, targetClass, superClass):
             BIND("%s"^^xsd:string AS ?localValue).
         }
         """ % (targetClass, superClass, localTerm)
+
     annotationResponse = requests.post(endpoint,
-    data=query, 
+    data="update="+query, 
     headers={
-        "Content-Type": "application/sparql-query"
+        "Content-Type": "application/x-www-form-urlencoded"
     })
-    return annotationResponse.text
+    print(annotationResponse.code)
 
 #cT stage
 addMapping("0", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48719", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
