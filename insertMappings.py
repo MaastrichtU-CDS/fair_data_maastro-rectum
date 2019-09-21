@@ -49,13 +49,13 @@ addMapping("0", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48719", "ht
 addMapping("1", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48720", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
 addMapping("2", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48724", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
 addMapping("3", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48728", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
-addMapping("3", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48732", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
+addMapping("4", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48732", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48885")
 
 #cN stage
 addMapping("0", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48705", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884")
 addMapping("1", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48706", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884")
 addMapping("2", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48786", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884")
-addMapping("2", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48714", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884")
+addMapping("3", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48714", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48884")
 
 #gender
 addMapping("v", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16576", "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421")
